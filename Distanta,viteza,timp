@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+  double dist,v,t;
+  string transport;
+  cout<<"Scrieti cu ce mijloc de transport va deplasati: ";
+  cin>>transport;
+
+  cout<<"Introduceti distanta pe care o aveti de parcurs in km: ";
+  cin>>dist;
+
+  cout<<"Introduceti viteza cu care se deplaseaza "<<transport<<" in km/h :";
+  cin>>v;
+
+//Verificam daca viteza este mai mare decat 0
+  if(v>0)
+  {
+    t=dist/v;
+  }
+  else
+  {
+    cout<<"Viteza trebuie sa fie mai mare decat 0!<<endl;"
+  }
+
+cout<<"Timpul parcurs de catre "<< transport<<" este de: "<<t<<" ore."<<endl;
+return 0;
+}
