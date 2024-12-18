@@ -1,0 +1,11 @@
+dist=float(input("Introduceti distanta pe care o aveti de parcurs in km: "))
+transport=input("Scrieti cu ce mijloc de transport va deplasati: ")
+v=float(inpu(f"Introduceti viteza cu care se deplaseaza {transport} in km/h: "))
+
+#Verificam daca viteza este mai mare decat 0
+if v>0
+  t=dist/v
+printf(f"Timpul parcurs de catre {transport} este de {t} ore.")
+
+else:
+  printf("Viteza trebuie sa fie mai mare decat 0!")
