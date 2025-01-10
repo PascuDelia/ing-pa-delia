@@ -1,0 +1,66 @@
+import heapq
+from collections import defaultdict
+
+#Definim structura Node
+class Node:
+def_init_(self, char, freq): 
+  self.f=freq;
+  self.ch=char
+  self.right= None
+  self.left= None
+  
+#Comparam nodurile pe baza frecventeti
+def _lt_(self,other):
+  return self.f < other.f
+#Generam codurile Huffman cu aceasta functie
+def generate_codes(root,current_code, codes):
+  if root is None:
+      return 
+  if root.left is None and root.right is None:  #daca nodul este o frunza
+      codes[root.ch]= current.code
+
+#Apelam recursiv sub-arborul stang si drept
+generate_codes(root.left, current_code + "0",codes)
+generate_codes(root.right, current_code + "1",codes)
+
+#Functia principala pentru codificare
+def Huffman_cod(text)
+
+#Calculam frecventele pentru fiecare caracter
+    f=defaultdict(int)
+    for char in text:
+        f[char] +=1
+
+#cream o lista de noduri
+min_heap=[]
+for char, freq in f.items():
+    heapq.heappush(min.heap, Node(char,freq))
+#Construim arborele
+while len(min_heap)>1;
+      left=heapq.heappop(min_heap)
+      right=heapq.heappop(min_heap)
+      merged=Node(None,left.f + right.f)
+      merged.left=left
+      merged.right=right
+      heapq.heappush(min_heap, merged)
+#Radacina arborelui Huffman
+root=min_heap[0]
+
+#Generam codurile
+codes={}
+generate_codes(root,"",codes)
+
+#Afisam codurile pentru fiecare caracter
+print("Codurile Huffman pentru fiecare caracter sunt: ")
+for char,code in codes.items()
+    print(f"{char}:{code}")
+
+#Codificarea textului
+print("\nText codificat: ")
+encode_text='',join(codes[char] for char in text)
+print(encoded_text)
+
+#Functia principala
+if _name_=="_main_":
+  text=input("Introduceti textul pentru codificare:")
+  Huffman_coding(text)
