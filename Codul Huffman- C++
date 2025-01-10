@@ -1,0 +1,14 @@
+#include<iostream>
+#include<queue> //permite utilizarea structurii de date priority_queque(coada de prioritate)
+#include<vector> //permite utilizarea vectorilor
+#include<unordered_map>permite utilizarea unui map nesortat
+#include<string>
+using namespace std;
+
+//Definim structura Nod
+struct Nod {
+  char ch;
+  int frecventa;
+  Nod* st;
+  Nod* dr;
+  Nod(char c, int f): ch(c), frecventa(f), st()
